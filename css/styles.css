@@ -40,6 +40,15 @@ header h2 {
     background-color: #901cad;
 }
 
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1em;
+}
+
+.carousel {
+    border: solid #5637dd;
+}
+
 
 /* This was for the tabs around the Community Partners
 .tab-content {
