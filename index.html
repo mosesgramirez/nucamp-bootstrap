@@ -211,6 +211,15 @@
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only">Next</span>
                     </a>
+                    <!-- Use for separate pause/play buttons
+                    <div class="btn-group" id="carouselButton"></div> -->
+                    <button class="btn btn-info btn-sm" id="carouselButton">
+                            <i class="fa fa-pause"></i>
+                        </button>
+                    <!-- Separate play button
+                    <button class="btn btn-info btn-sm" id="carouselPlay">
+                            <i class="fa fa-play"></i>
+                        </button> -->
                 </div>
             </div>
         </div>
@@ -264,8 +273,8 @@
                 </div>
             </div>
         </div>
-
-        <!-- Inline Reserve Form -->
+        <!--
+      Inline Reserve Form
         <div id="rsvForm" class="row row-content align-items-center">
             <div class="col-sm-6 mx-auto">
                 <div class="card">
@@ -302,10 +311,8 @@
                 </div>
             </div>
         </div>
-
+        -->
     </div>
-
-
     <footer class="site-footer">
         <div class="container">
             <div class="row">
@@ -349,9 +356,8 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
 
-    <!--
+    <!-- Scroll from Reserve Form button to inline form, if no modal is used. 
     <script>
-        // Scroll function for Reserve Campsite button, if modal is not used
         $(function() {
             $('[data-toggle="tooltip"]').tooltip()
         })
@@ -364,6 +370,41 @@
         })
     </script>
     -->
+
+    <!-- Function for two separate carousel play/pause buttons
+    <script>
+        $(function() {
+            // If using "data-ride" attribute, this section is not needed
+            // $(".carousel").carousel({
+            //    interval: 5000,
+            //    ride: "carousel"
+            // });
+            $("#carouselPause").click(function() {
+                $(".carousel").carousel("pause");
+            });
+            $("#carouselPlay").click(function() {
+                $(".carousel").carousel("cycle");
+            });
+        });
+    </script>
+    -->
+
+    <script>
+        // Toggling carousel pause/play button
+        $(function() {
+            $("#carouselButton").click(function() {
+                if ($("#carouselButton").children("i").hasClass("fa-pause")) {
+                    $(".carousel").carousel("pause");
+                    $("#carouselButton").children("i").removeClass("fa-pause");
+                    $("#carouselButton").children("i").addClass("fa-play");
+                } else {
+                    $(".carousel").carousel("cycle");
+                    $("#carouselButton").children("i").removeClass("fa-play");
+                    $("#carouselButton").children("i").addClass("fa-pause");
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

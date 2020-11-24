@@ -50,6 +50,13 @@ header h2 {
     border: solid #5637dd;
 }
 
+#carouselButton {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+}
+
 
 /* This was for the tabs around the Community Partners
 .tab-content {
