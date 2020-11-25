@@ -1,62 +1,50 @@
 body {
-    font-family: "Open Sans", sans-serif;
-    background-color: rgb(245, 245, 245);
-}
+  font-family: "Open Sans", sans-serif;
+  background-color: whitesmoke; }
 
 h1,
 h2,
 h3 {
-    font-family: "Lobster", cursive;
-}
+  font-family: "Lobster", cursive; }
 
 h2 {
-    color: #3046c5;
-}
+  color: #3046C5; }
 
 header h2 {
-    color: #cec8ff;
-}
+  color: #CEC8FF; }
 
 .site-footer {
-    background-image: linear-gradient(#cec8ff, white);
-    padding: 20px 0;
-}
+  background-image: linear-gradient(#CEC8FF, white);
+  padding: 20px 0; }
 
 .jumbotron {
-    margin: 0;
-    /* Added to remove space before the navbar */
-    padding: 30px;
-    background-image: linear-gradient(to right, #5637dd, #3046c5, #60106b);
-    color: white;
-}
+  margin: 0;
+  /* Added to remove space before the navbar */
+  padding: 30px;
+  background-image: linear-gradient(to right, #5637dd, #3046C5, #60106b);
+  color: white; }
 
 .row-content {
-    padding: 50px 0;
-    /* added lightgray because Firefox shows this line as black */
-    border-bottom: 1px ridge lightgray;
-    min-height: 200px;
-}
+  padding: 50px 0;
+  /* added lightgray because Firefox shows this line as black */
+  border-bottom: 1px ridge lightgray;
+  min-height: 200px; }
 
 .navbar {
-    background-color: #901cad;
-}
+  background-color: #901CAD; }
 
 .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 1em;
-}
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1em; }
 
 .carousel {
-    border: solid #5637dd;
-}
+  border: solid #5637dd; }
 
 #carouselButton {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: 100;
-}
-
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 100; }
 
 /* This was for the tabs around the Community Partners
 .tab-content {

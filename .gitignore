@@ -1,4 +1,7 @@
 node_modules
+dist
 bs-grid-test.html
 tables-cards.html
 river.jpg
+styles.css.old
+test.html
