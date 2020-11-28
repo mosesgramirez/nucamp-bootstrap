@@ -1,17 +1,17 @@
  /*
-   // Scroll from Reserve Form button to inline form, if no modal is used. 
+                           // Scroll from Reserve Form button to inline form, if no modal is used. 
 
-   $(function() {
-       $('[data-toggle="tooltip"]').tooltip();
-   });
+                           $(function() {
+                               $('[data-toggle="tooltip"]').tooltip();
+                           });
 
-   $(".jumbotron a").click(function() {
-       $("body,html").animate({
-           scrollTop: $("#" + $(this).data('value')).offset().top
-       }, 1000);
+                           $(".jumbotron a").click(function() {
+                               $("body,html").animate({
+                                   scrollTop: $("#" + $(this).data('value')).offset().top
+                               }, 1000);
 
-   });
- */
+                           });
+                         */
 
  /* Function for two separate carousel play/pause buttons
  $(function() {
@@ -41,5 +41,13 @@
              $("#carouselButton").children("i").removeClass("fa-play");
              $("#carouselButton").children("i").addClass("fa-pause");
          }
+     });
+
+     $("#reserveButton").click(function() {
+         $("#reserveModal").modal("show");
+     });
+
+     $("#loginButton").click(function() {
+         $("#loginModal").modal("show");
      });
  });

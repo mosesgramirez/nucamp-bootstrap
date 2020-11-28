@@ -15,8 +15,9 @@
 
 <body>
     <div>
-        <button type="button" id="btnToggleBanana" class="btn btn-warning">Show Banana</button>
-        <button type="button" id="btnToggleMonkey" class="btn btn-success">Show Monkey</button>
+        <button type="button" id="btnToggleBanana" class="btn btn-warning showBanana">Show Banana</button>
+        <button type="button" id="btnToggleMonkey" class="btn btn-success showMonkey">Show Monkey</button>
+
     </div>
     <div>
         <img id="banana" src="https://i.ibb.co/82WT957/banana.png" class="collapse" />
@@ -30,30 +31,31 @@
     <script>
         $(function() {
             $("#btnToggleBanana").click(function() {
-                $("#banana").toggle(
-                    function() {
-
-                        $("#btnToggleBanana").html("Hide Banana");
-                        console.log("first function was run");
-                    },
-                    function() {
-
-                        $("#btnToggleBanana").html("Show Banana");
-                        console.log("second function was run");
-                    }
-                )
+                if ($("#btnToggleBanana").hasClass("showBanana")) {
+                    $("#banana").collapse("show");
+                    $("#btnToggleBanana").html("Hide Banana");
+                    $("#btnToggleBanana").removeClass("showBanana");
+                    $("#btnToggleBanana").addClass("hideBanana");
+                } else {
+                    $("#banana").collapse("hide");
+                    $("#btnToggleBanana").html("Show Banana");
+                    $("#btnToggleBanana").removeClass("hideBanana");
+                    $("#btnToggleBanana").addClass("showBanana");
+                }
             });
 
             $("#btnToggleMonkey").click(function() {
-                $("#monkey").collapse("show");
-                $("#btnShowMonkey").html("Hide Monkey");
-                $("#btnShowMonkey").addClass("btnHideMonkey")
-            });
-
-            $(".btnHideMonkey").click(function() {
-                $("#monkey").collapse("hide");
-                $("#btnShowMonkey").html("Show Monkey");
-                $("#btnShowBanana").removeClass("btnHideMonkey")
+                if ($("#btnToggleMonkey").hasClass("showMonkey")) {
+                    $("#monkey").collapse("show");
+                    $("#btnToggleMonkey").html("Hide Monkey");
+                    $("#btnToggleMonkey").removeClass("showMonkey");
+                    $("#btnToggleMonkey").addClass("hideMonkey");
+                } else {
+                    $("#monkey").collapse("hide");
+                    $("#btnToggleMonkey").html("Show Monkey");
+                    $("#btnToggleBanana").removeClass("hideMonkey");
+                    $("#btnToggleMonkey").addClass("showMonkey");
+                }
             });
         });
     </script>

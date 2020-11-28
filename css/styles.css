@@ -33,6 +33,14 @@ header h2 {
 .navbar {
   background-color: #901CAD; }
 
+#reserveModal .modal-header {
+  background-color: #17a2b8;
+  color: white; }
+
+#loginModal .modal-header {
+  background-color: #901CAD;
+  color: white; }
+
 .carousel-caption {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 1em; }
